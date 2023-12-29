@@ -1,5 +1,10 @@
 # groupcache
 
+This is version v2.5.0 from https://github.com/mailgun/groupcache modified to
+remove global state, for testing recreation of groupcache resources.
+
+---
+
 A modified version of [group cache](https://github.com/golang/groupcache) with
 support for `context.Context`, [go modules](https://github.com/golang/go/wiki/Modules),
 and explicit key removal and expiration. See the `CHANGELOG` for a complete list of 
@@ -10,7 +15,7 @@ modifications.
 groupcache is a caching and cache-filling library, intended as a
 replacement for memcached in many cases.
 
-For API docs and examples, see http://godoc.org/github.com/mailgun/groupcache/v2
+For API docs and examples, see http://godoc.org/github.com/udhos/groupcache/v2
 
    
 ### Modifications from original library
@@ -87,7 +92,7 @@ import (
     "log"
     "time"
 
-    "github.com/mailgun/groupcache/v2"
+    "github.com/udhos/groupcache/v2"
 )
 
 func ExampleUsage() {
